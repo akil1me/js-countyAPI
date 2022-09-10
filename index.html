@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Countries API</title>
+</head>
+
+<body>
+  <main>
+    <section class="country">
+      <div class="country__container container">
+        <h1 class="h1 text-center my-3">Search country</h1>
+        <div class="country__inner">
+          <form class="country__form" autocomplete="off">
+            <div class="row">
+              <div class="col-10 p-1">
+                <input class="country__input form-control" type="text" name="user-conut-search"
+                  aria-label="conut-search" placeholder="search..." required>
+              </div>
+
+              <div class="col-2 p-1">
+                <button class="btn btn-primary" type="submit">search</button>
+              </div>
+            </div>
+          </form>
+
+          <ul class="country__list list-unstyled mt-4 d-flex flex-wrap justify-content-between"></ul>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="country__spinner spinner-border text-primary position-absolute top-0 end-0 bottom-0 start-0 m-auto d-none"
+    role="status">
+
+    <!-- Add template -->
+    <template id="country__temlate">
+      <li class="country__item card">
+        <img src="" class="country__img card-img-top" alt="" width="300" height="180">
+        <div class="card-body">
+          <h2 class="country__title card-text h4"></h2>
+
+          <p class="country__population mb-1"></p>
+          <p class="country__area mb-1"></p>
+          <p class="country__valute"></p>
+        </div>
+      </li>
+    </template>
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
