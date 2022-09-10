@@ -21,7 +21,7 @@ function renderCountry(datum) {
     let itemClone = newDocFragment.querySelector(".country__item");
 
     itemClone.querySelector(".country__img").src = data.flags.png;
-    itemClone.querySelector(".country__img").href = data.name.common;
+    itemClone.querySelector(".country__img").alt = data.name.common;
 
     itemClone.querySelector(".country__title").textContent = data.name.common;
 
@@ -72,14 +72,14 @@ function searchCountry(countName) {
 }
 
 function spinnerRemove() {
-  elSpinner.classList.remove("d-none")
+  elSpinner.classList.remove("d-none");
 }
 
 elCountForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
   elCountList.innerHTML = null;
-  spinnerRemove()
+  spinnerRemove();
 
   let inputValue = elCountInput.value.toLowerCase().trim();
   searchCountry(inputValue);
