@@ -16,20 +16,24 @@
       <div class="country__container container">
         <h1 class="h1 text-center my-3">Search country</h1>
         <div class="country__inner">
-          <form class="country__form" autocomplete="off">
-            <div class="row">
-              <div class="col-10 p-1">
-                <input class="country__input form-control" type="text" name="user-conut-search"
-                  aria-label="conut-search" placeholder="search..." required>
-              </div>
+          <div class="d-flex  justify-content-sm-start justify-content-center">
+            <form class="country__form" autocomplete="off">
+              <div class="row">
+                <div class="col-10 p-1">
+                  <input class="country__input form-control" type="text" name="user-conut-search"
+                    aria-label="conut-search" placeholder="search..." required>
+                </div>
 
-              <div class="col-2 p-1">
-                <button class="btn btn-primary" type="submit">search</button>
+                <div class="col-2 p-1">
+                  <button class="btn btn-primary" type="submit">search</button>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
 
-          <ul class="country__list list-unstyled mt-4 d-flex flex-wrap justify-content-between"></ul>
+          </div>
+          <ul
+            class="country__list list-unstyled mt-4 d-flex flex-wrap justify-content-center justify-content-sm-between ">
+          </ul>
         </div>
       </div>
       </div>
@@ -42,7 +46,7 @@
 
   <!-- Add template -->
   <template id="country__temlate">
-    <li class="country__item card">
+    <li class="country__item card mb-4">
       <img src="" class="country__img card-img-top" alt="" width="300" height="180">
       <div class="card-body">
         <h2 class="country__title card-text h4"></h2>
