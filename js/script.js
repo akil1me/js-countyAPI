@@ -78,6 +78,7 @@ function spinnerRemove() {
 elCountForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
+  elCountList.innerHTML = null;
   spinnerRemove()
 
   let inputValue = elCountInput.value.toLowerCase().trim();
