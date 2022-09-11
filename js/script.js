@@ -29,7 +29,7 @@ function renderCountry(datum) {
 
     itemClone.querySelector(".country__area").innerHTML = `<srtong class="fw-bold">Area:</srtong> ${data.area.toLocaleString('de-DE')}`;
 
-    itemClone.querySelector(".country__valute").innerHTML = `<srtong class="fw-bold">Valute:</srtong> ${valute(data.currencies)}`;
+    itemClone.querySelector(".country__valute").innerHTML = `<srtong class="fw-bold">Valute:</srtong> ${valuteName(data.currencies)} || ${valuteSybol(data.currencies)}`;
 
     elFragmentWrapper.append(itemClone);
   })
@@ -37,11 +37,15 @@ function renderCountry(datum) {
   elCountList.append(elFragmentWrapper);
 }
 
-function valute(data) {
+function valuteName(data) {
   for (let a in data) {
-    for (let b in data[a]) {
-      return data[a][b];
-    }
+    return data[a].name
+  }
+}
+
+function valuteSybol(data) {
+  for (let a in data) {
+    return data[a].symbol;
   }
 }
 
