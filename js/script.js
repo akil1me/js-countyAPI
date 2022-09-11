@@ -79,6 +79,8 @@ function spinnerRemove() {
   elSpinner.classList.remove("d-none");
 }
 
+searchCountry("china");
+
 elCountForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
